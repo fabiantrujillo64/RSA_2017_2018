@@ -1,3 +1,4 @@
+#does not successfully decrypt nor exit
 import sys
 message = ''
 encrypted_message = ''
