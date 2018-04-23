@@ -1,0 +1,47 @@
+import sys
+message = ''
+encrypted_message = ''
+decrypted_message = ''
+
+def encrypt(e,n):
+    global encrypted_message
+    message = raw_input('Please type your message:')
+    for i in message:
+        numerize = ord(i)
+        encrypt = pow(numerize, e, n)
+        denumerize = unichr(encrypt)
+        encrypted_message += denumerize
+
+    print encrypted_message
+    
+
+def decrypt(d,n):
+    global decrypted_message    
+    encrypted_message= raw_input("Hello, please type in the encrypted message:")
+    for t in encrypted_message:
+        print(t)
+        numerize = ord(t)
+        decrypt = pow(numerize,d,n)
+        denumerize = unichr(decrypt)
+        decrypted_message += denumerize
+        
+    print decrypted_message
+
+
+def run():
+    initial_a = raw_input("Hello, would you like to encrypt, decrypt, or exit?") 
+
+    while initial_a!= "exit" or initial_a!= "Exit":
+        if initial_a == "encrypt":
+            e = input("What is your e value?")
+            n = input("What is your n value?")            
+            encrypt(e,n)
+            initial_a = raw_input("Hello, would you like to encrypt, decrypt, or exit?") 
+        
+        elif initial_a == "decrypt":
+            d = input("What is your d value?")
+            n = input("What is your n value?")            
+            decrypt(d,n)
+            initial_a = raw_input("Hello, would you like to encrypt, decrypt, or exit?") 
+
+         
