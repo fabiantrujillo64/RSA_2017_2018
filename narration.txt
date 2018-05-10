@@ -1,1 +1,0 @@
-The video begins with the user answering a prompt asking them to decrypt, encrypt a message or exit the code entirely. The user responds encrypt, then the user follows the steps and encrypt his message. The user then decrypts his message back to his original. The user then exits the code.
